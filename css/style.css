@@ -1,0 +1,392 @@
+/*
+  Variáveis
+*/
+
+:root {
+  /* Pulo do gato */
+  /* 1rem = 16px (User Agent) = 100% (User Agent) */
+  font-size: 62.5%; /* 10px */
+
+  --main-color: #6d416e;
+  --link-color: #666666;
+  --text1: #999999;
+  --highligth-text: #333333;
+  --input-text: #555555;
+  --white-color: #ffffff;
+  --point-list: #cccccc;
+  --line-input: #d9d9d9;
+  --invalid-acess: rgb(228, 7, 7);
+}
+
+/*
+    Fontes
+*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+/*
+    Zerar estilos
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Poppins-Regular, sans-serif;
+}
+
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+input,
+button {
+  outline: none !important;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/*
+    Utilitários
+*/
+
+.text1 {
+  font-family: Poppins-Regular;
+  font-size: 7rem;
+  color: var(--text1);
+  line-height: 1.5;
+}
+
+.text2 {
+  font-family: Poppins-Regular;
+  font-size: 7rem;
+  color: var(--main-color);
+  line-height: 1.5;
+}
+
+.margin-bottom-35 {
+  margin-bottom: 3.5rem;
+}
+
+.margin-top-35 {
+  margin-top: 3.5rem;
+}
+
+.margin-bottom-8 {
+  margin-bottom: 0.8rem;
+}
+
+.margin-top-8 {
+  margin-top: 0.8rem;
+}
+
+.margin-left-50 {
+  margin-left: 5rem;
+}
+
+/*
+    Login
+*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--white-color);
+}
+
+.wrap-login {
+  width: 60rem; /* 370px divido por 10*/
+  margin-right: 5rem; /* 50px divido por 10*/
+  background: var(--white-color);
+}
+
+/*
+    Formulário
+*/
+
+.login-form {
+  width: 100%;
+}
+
+.login-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 7rem;
+  color: var(--highligth-text);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/*
+    Input
+*/
+
+.wrap-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 0.2rem solid var(--line-input);
+}
+
+.input-form {
+  font-family: Poppins-SemiBold;
+  font-size: 7rem;
+  color: var(--input-text);
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 5.2rem;
+  background: transparent;
+  padding: 0 0.5rem;
+}
+
+.focus-input-form {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input-form::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  transition: all 0.4s;
+  background: var(--main-color);
+}
+
+.focus-input-form::after {
+  font-family: Poppins-Medium;
+  font-size: 7rem;
+  color: var(--text1);
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 1.5rem;
+  left: 0rem;
+  padding-left: 0.5rem;
+  transition: all 0.4s;
+}
+
+.input-form:focus + .focus-input-form::after {
+  top: -2rem;
+  font-size: 7rem;
+}
+
+.input-form:focus + .focus-input-form::before {
+  width: 100%;
+}
+
+.has-val.input-form + .focus-input-form::after {
+  top: -2rem;
+  font-size: 7rem;
+}
+
+.has-val.input-form + .focus-input-form::before {
+  width: 100%;
+}
+
+/*
+    Botão
+*/
+
+.container-login-form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-form-btn {
+  font-family: Poppins-Medium;
+  font-size: 2.5rem;
+  color: var(--white-color);
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  width: 100%;
+  height: 5.8rem;
+  background-color: var(--main-color);
+  border-radius: 5rem;
+  transition: all 0.4s;
+}
+
+.login-form-btn:hover {
+  background-color: var(--highligth-text);
+}
+
+.close-btn {
+  font-family: Poppins-Medium;
+  color: var(--white-color);
+  background-color: var(--main-color);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 5rem;
+  transition: all 0.4s;
+}
+
+.close-btn:hover {
+  background-color: var(--highligth-text);
+}
+
+/*
+    Links - Login utils
+*/
+
+a {
+  font-family: Poppins-Regular;
+  font-size: 7rem;
+  line-height: 1.7;
+  color: var(--link-color);
+  margin: 0rem;
+  transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--highligth-text);
+}
+
+/*
+    Login utils
+*/
+
+.login-utils {
+  margin-top: 2rem;
+}
+
+.login-utils li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.login-utils li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--point-list);
+  top: 45%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.wrap-input-invalid {
+  width: 100%;
+  border-bottom: solid 0.2rem var(--invalid-acess);
+}
+
+/* 
+    Modal
+*/
+
+.container-modal {
+  background-color: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.modal-content {
+  margin: 0 auto;
+  margin-top: 5%;
+  max-width: 45rem;
+  background: var(--white-color);
+  font-family: Poppins-Regular;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 0.1rem;
+}
+
+.modal-header {
+  font-family: Poppins-Bold;
+  background-color: #cccccc;
+}
+
+.modal-body {
+  font-family: Poppins-Bold;
+  padding: 4rem;
+}
+
+.modal-footer {
+  background-color: #cccccc;
+}
+
+#output {
+  font-size: 1.5rem;
+}
+#main-text {
+  font-size: 3rem;
+}
