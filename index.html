@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icons8-upload-64.png" type="image/x-icon">
+    <title>Tela Upload File</title>
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-login">
+            <div class="wrap-login">
+                <form class="login-form" id="login-form">
+                    <span class="login-form-title">
+                        Faça seu Upload
+                    </span>
+
+                    <div class=" margin-top-35 margin-bottom-35">
+                        <h2 id="main-text">
+                            Insira o arquivo com as informações necessárias, exemplo:
+                        </h2>
+                        <br>
+                        <hr>
+                        <br>
+                        <h2>
+                            2017.1,ADM0002,60,83.33,7.1 <br>
+                            2017.1,COMP0197,90,84.44,2.2
+                        </h2>
+                        <br>
+                        <hr>
+                    </div>
+
+                    <div class="container-login-form-btn">
+                        <input type="file" name="" id="inputfile" title="file" onchange="processa(this)">
+                        <label class="login-form-btn" for="inputfile">Selecione um arquivo</label>
+                    </div>
+                </form>
+
+                <div class=" margin-top-35 margin-bottom-35">
+                    <h2>Histórico Escolar</h2>
+                    <br>
+                    <hr>
+                    <br>
+                    <div id="output"></div>
+                </div>
+            </div>
+            <img src="images/upload-bro.png" width="500em" class="margin-left-50" />
+        </div>
+</body>
+
+</html>
