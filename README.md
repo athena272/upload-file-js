@@ -1,8 +1,8 @@
 # Upload File JS
 ## Sobre o projeto
-Uma aplicação feita para a partir de arquivo de texto exibir algumas informações sobre a graduação do estudante 
+Uma aplicação que a partir dos Períodos, Códigos das Matérias, Cargas Horárias, Frequências e Notas vindas de um arquivo de texto constroi e exibi o histórico escolar do aluno 
 
-## Link para [Acesso](https://athena272.github.io/calculator-js/)
+## Link para [Acesso](https://athena272.github.io/upload-file-js/)
 
 ## Ferramentas 
 
